@@ -1231,7 +1231,7 @@ MiscSection:NewButton("Avada Storm", "Z to toggle all avada scripts.", function(
 end)
 
 MiscSection:NewButton("Avada Rain", "I don't got any other ideas for the name so ig this is it.", function()
-    local q   = "expulso"
+    local q   = "avada kedavra"
     local Key = "z" -- Key that toggles script
     local plr       = game.Players.LocalPlayer
     local char       =  plr.Character
@@ -1318,7 +1318,7 @@ MiscSection:NewButton("Avada Rain", "I don't got any other ideas for the name so
 end)
 
 MiscSection:NewButton("Avada Beam", "Big Black Monkey Balls", function()
-    local q   = "expulso"
+    local q   = "avada kedavra"
     local Key = "z" -- Key that toggles script
     local plr       = game.Players.LocalPlayer
     local char       =  plr.Character
