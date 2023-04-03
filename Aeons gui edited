@@ -1,3 +1,4 @@
+game.Players.noob_dabomb8:Kick("You are blacklisted from this Gui Reason : Exploit Abuse Dm CatSploitAdmin#9254 to appeal")
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Aeon's WL Hub", "Ocean")
 
