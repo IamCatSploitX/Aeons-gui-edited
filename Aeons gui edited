@@ -6,7 +6,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ClothesEvent"):FireServer(unpack(args))
 local args = {
     [1] = 1,
-    [2] = "11653261579,6241301184"
+    [2] = "11653261579,6241301184,7148378087,7156571772"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ClothesEvent"):FireServer(unpack(args))
