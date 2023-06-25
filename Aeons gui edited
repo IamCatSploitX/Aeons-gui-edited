@@ -1997,7 +1997,7 @@ local speed = humanoid.WalkSpeed
 
 function shoot()
     for i,t in pairs (game.Players:GetPlayers()) do
-        if t.Name == "ImagesOfPugs" or t.Name == "ANOTHERPLAYERNAME" then -- You can add other names too just remember typing "or" between t.Name == "ANOTHERPLAYERNAME"s
+        if t.Name == "noob_dabomb8" or t.Name == "ANOTHERPLAYERNAME" then -- You can add other names too just remember typing "or" between t.Name == "ANOTHERPLAYERNAME"s
             local v = (mouse.Hit.p - char.HumanoidRootPart.Position).unit
             local w = v * 3
             local y = t.Character.UpperTorso.Position
@@ -2035,7 +2035,7 @@ local speed = humanoid.WalkSpeed
 
 function shoot()
     for i,t in pairs (game.Players:GetPlayers()) do
-        if t.Name == "ImagesOfPugs" or t.Name == "ANOTHERPLAYERNAME" then -- You can add other names too just remember typing "or" between t.Name == "ANOTHERPLAYERNAME"s
+        if t.Name == "noob_dabomb8" or t.Name == "ANOTHERPLAYERNAME" then -- You can add other names too just remember typing "or" between t.Name == "ANOTHERPLAYERNAME"s
             local v = (t.Character.UpperTorso.Position - char.HumanoidRootPart.Position).unit
             local w = v * 3
             local y = t.Character.UpperTorso.Position + Vector3.new(0, 1.5, 0) -- add a small offset to fire the projectile above the player's torso
@@ -2084,7 +2084,7 @@ game:GetService("RunService").Heartbeat:Connect(updateProjectiles)
 game:GetService("RunService").RenderStepped:Connect(function()
     if Bubblewalk == true and ((humanoid:GetState() == Enum.HumanoidStateType.Running) or (humanoid:GetState() == Enum.HumanoidStateType.RunningNoPhysics)) then -- check if orchwalk is true and humanoid is moving and on the ground
         for _, t in pairs(game.Players:GetPlayers()) do
-            if t.Name == "ImagesOfPugs" or t.Name == "ANOTHERPLAYERNAME" then
+            if t.Name == "noob_dabomb8" or t.Name == "ANOTHERPLAYERNAME" then
                 local projectile = Instance.new("Part")
                 projectile.Shape = Enum.PartType.Ball
                 projectile.Size = Vector3.new(0.5, 0.5, 0.5)
@@ -2103,4 +2103,5 @@ game:GetService("RunService").RenderStepped:Connect(function()
             end
         end
     end
+end)
 end)
